@@ -3,6 +3,8 @@ if status is-interactive
   alias nvimex="XDG_CONFIG_HOME=~/.config/nvim-ex/ XDG_DATA_HOME=~/.local/share/nvim-ex/ XDG_RUNTRIME_DIR=/tmp/nvim-ex.$USER/ XDG_STATE_DIR=~/.local/state/nvim-ex/ nvim"
   alias config="/usr/bin/git -C $HOME/.config"
 
+  # `ll` alias.
+  # TODO: rewrite to enable `ll <pattern>`. Should use a full function syntax.
   set -l ls_args "--color=always -lah"
   alias ll="ls $ls_args | grep "^d" && ls $ls_args | grep \"^-\" && ls $ls_args | grep \"^l\""
 
@@ -19,4 +21,5 @@ else
   echo 'non-interactive'
 end
 
+# Move to local config
 set -gx CUDACXX /usr/local/cuda-12.3/bin/nvcc
