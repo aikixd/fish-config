@@ -5,8 +5,9 @@ if status is-interactive
 
   # `ll` alias.
   # TODO: rewrite to enable `ll <pattern>`. Should use a full function syntax.
-  set -l ls_args "--color=always -lah"
-  alias ll="ls $ls_args | grep "^d" && ls $ls_args | grep \"^-\" && ls $ls_args | grep \"^l\""
+  set -l ls_args "-lha --color=always"
+  # alias ll="ls $ls_args $argv | grep "^d" ; ls $ls_args $argv | grep \"^-\" ; ls $ls_args $argv | grep \"^l\""
+  # alias ll="ls $argv $ls_args | grep \"^d\""
 
 
   set -g fish_ambiguous_width 2
