@@ -3,13 +3,6 @@ if status is-interactive
   alias nvimex="XDG_CONFIG_HOME=~/.config/nvim-ex/ XDG_DATA_HOME=~/.local/share/nvim-ex/ XDG_RUNTRIME_DIR=/tmp/nvim-ex.$USER/ XDG_STATE_DIR=~/.local/state/nvim-ex/ nvim"
   alias config="/usr/bin/git -C $HOME/.config"
 
-  # `ll` alias.
-  # TODO: rewrite to enable `ll <pattern>`. Should use a full function syntax.
-  set -l ls_args "-lha --color=always"
-  # alias ll="ls $ls_args $argv | grep "^d" ; ls $ls_args $argv | grep \"^-\" ; ls $ls_args $argv | grep \"^l\""
-  # alias ll="ls $argv $ls_args | grep \"^d\""
-
-
   set -g fish_ambiguous_width 2
   set -g fish_emoji_width 2
 
