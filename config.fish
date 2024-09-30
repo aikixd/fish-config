@@ -6,11 +6,14 @@ if status is-interactive
   set -g fish_ambiguous_width 2
   set -g fish_emoji_width 2
 
+  # Keymaps
   set -g fish_key_bindings fish_vi_key_bindings
   set -g fish_cursor_insert line
 
+  # Env
   set -gx MANPAGER 'nvim +Man!'
   set -gx MANWIDTH 999
+  set -gx SUDO_EDITOR 'nvim'
 else
   echo 'non-interactive'
 end
