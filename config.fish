@@ -15,11 +15,17 @@ if status is-interactive
   set -gx MANPAGER 'nvim +Man!'
   set -gx MANWIDTH 999
   set -gx SUDO_EDITOR 'nvim'
+  set -gx EDITOR 'nvim'
+  set -gx PATH $HOME/.npm-global/bin $PATH
+
+  set -gx QML_IMPORT_PATH /usr/lib64/qt6/qml
 else
-  echo 'non-interactive'
+
 end
 
 # Move to local config
-set -gx CUDACXX /usr/local/cuda-12.3/bin/nvcc
+set -gx CUDACXX /usr/local/cuda
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/aikixd/.ghcup/bin $PATH # ghcup-env
+
+set -gx PATH $HOME/.local/bin/ $PATH
